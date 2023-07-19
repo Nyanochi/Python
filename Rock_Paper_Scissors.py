@@ -1,13 +1,14 @@
 import random
 
+
 def new_game():
     win = bool
     while True:
-        choices = ["rock","paper","scissors"]
+        choices = ["rock", "paper", "scissors"]
         computer_choice = random.choice(choices)
         while True:
-            your_choice = input("Please choose Rock, Paper or Scissors: ")
-            if your_choice.lower() not in choices:
+            your_choice = str(input("Please choose Rock, Paper or Scissors: ")).lower()
+            if your_choice not in choices:
                 print("Invalid input. Please choose again!")
                 continue
             else:
@@ -29,6 +30,7 @@ def new_game():
             print("Tie! Again.")
             continue
     return win
+
 
 computer_score = your_score = 0
 
